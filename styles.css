@@ -1,0 +1,96 @@
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  transition: background 0.2s, color 0.2s;
+}
+:root {
+  --bg: #f5f5f5;
+  --text: #222;
+  --item-bg: #fff;
+  --item-border: #ddd;
+  --accent: #007bff;
+}
+body.dark {
+  --bg: #181a1b;
+  --text: #f5f5f5;
+  --item-bg: #23272a;
+  --item-border: #333;
+  --accent: #66aaff;
+}
+.container {
+  max-width: 400px;
+  margin: 40px auto;
+  background: var(--item-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 24px 20px 16px 20px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+#toggle-dark {
+  background: none;
+  border: none;
+  font-size: 1.3em;
+  cursor: pointer;
+  color: var(--accent);
+}
+#todo-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+#todo-input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid var(--item-border);
+  border-radius: 4px;
+  font-size: 1em;
+  background: var(--bg);
+  color: var(--text);
+}
+#todo-form button {
+  padding: 8px 14px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+}
+#todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.todo-item {
+  display: flex;
+  align-items: center;
+  background: var(--item-bg);
+  border: 1px solid var(--item-border);
+  border-radius: 4px;
+  margin-bottom: 10px;
+  padding: 8px 10px;
+  transition: background 0.2s;
+}
+.todo-item.completed span {
+  text-decoration: line-through;
+  color: #888;
+}
+.todo-item button {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: #e74c3c;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+.todo-item input[type="checkbox"] {
+  margin-right: 10px;
+}
